@@ -1,0 +1,54 @@
+{
+  "name": "IntakeSubmission",
+  "type": "object",
+  "properties": {
+    "child_name": {
+      "type": "string",
+    },
+    "child_dob": {
+      "type": "string",
+      "format": "date",
+    },
+    "parent_name": {
+      "type": "string",
+    },
+    "parent_email": {
+      "type": "string",
+      "format": "email",
+    },
+    "parent_phone": {
+      "type": "string",
+    },
+    "service_interest": {
+      "type": "string",
+      "enum": [
+        "Early Intervention",
+        "School-Age Support",
+        "Social Skills Groups",
+        "Parent Training",
+      ],
+    },
+    "insurance_provider": {
+      "type": "string",
+    },
+    "member_id": {
+      "type": "string",
+    },
+    "additional_notes": {
+      "type": "string",
+    },
+    "status": {
+      "type": "string",
+      "enum": ["new", "contacted", "enrolled", "waitlisted"],
+      "default": "new",
+    },
+  },
+  "required": [
+    "child_name",
+    "child_dob",
+    "parent_name",
+    "parent_email",
+    "parent_phone",
+    "service_interest",
+  ],
+}
